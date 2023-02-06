@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @rudrathegod
 - 👀 I’m interested in computer science and gaming
-- 🌱 I’m currently learning java cs in freshmen year
+- 🌱 I’m currently taking APCSA in Sophomore Year
+- Going to take Java Certification in Jr. Year
 - 💞️ I’m looking to collaborate on anything possible with in javascript and python 
 - 📫 How to reach me just @ me
 
