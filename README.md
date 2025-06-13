@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @rudrathegod
-- 👀 I’m interested in computer science and gaming
-- 🌱 I’m currently taking APCSA in Sophomore Year
-- Going to take Java Certification in Jr. Year
-- 💞️ I’m looking to collaborate on anything possible with in javascript and python 
+- 👀 I’m interested in BMW, Data Science, and F1
+- 🌱 I’m currently graduating HS
+- Going to major in Data Sceince
+- 💞️ I’m looking to collaborate on anything possible with in java and python 
 - 📫 How to reach me just @ me
 
 <!---
