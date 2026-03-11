@@ -1,0 +1,130 @@
+﻿package apwork; 
+import java.lang.Math; 
+public class Point { 
+private static double x; 
+private static double y; 
+public Point(){ 
+x=0.0; 
+y=0.0; 
+} 
+public Point(double a, double b) { 
+x=a; 
+y=b; 
+} 
+public double getX() { 
+return x; 
+} 
+public double getY() { 
+return y; 
+} 
+public double changeX(double delX) { 
+return x; 
+} 
+public double changeY(double delY) { 
+return y; 
+} 
+public double distanceTo(Point P) { 
+return Math.sqrt( Math.pow(P.getX()-this.GetX(),2) + Math.pow(P.getY()-this.GetY(),2) ); 
+} 
+public boolean equal(Point P) { 
+if(Math.abs(P.getX()-this.getX())<0.01&& 
+Math.abs(P.getY()-this.getY())<0.01) { 
+return true; 
+}else { 
+return false; 
+} 
+} 
+public String toString() {
+return "(" + x + ", " + y + ")"; 
+} 
+} 
+Runner: 
+package chapter4; 
+public class PointLineRunner { 
+public static void main(String[] args) { 
+double grdist, ltdist; 
+int xcoord = (int) (Math.random() * 16) + 5; 
+int ycoord = (int) (Math.random() * 16) + 5; 
+Point coord1 = new Point(xcoord, ycoord); 
+System.out.println("A is (" + coord1.getX() + "," + coord1.getY() + ")"); xcoord = (int) (Math.random() * 16) + 5; 
+ycoord = (int) (Math.random() * 16) + 5; 
+Point coord2 = new Point(xcoord, ycoord); 
+System.out.println("B is (" + coord2.getX() + "," 
++ "" + coord2.getY() + ")"); 
+xcoord = (int) (Math.random() * 16) + 5; 
+ycoord = (int) (Math.random() * 16) + 5; 
+Point coord3 = new Point(xcoord, ycoord); 
+System.out.println("C is (" + coord3.getX() + "," + coord3.getY() + ")"); xcoord = (int) (Math.random() * 16) + 5; 
+ycoord = (int) (Math.random() * 16) + 5; 
+Point coord4 = new Point(xcoord, ycoord); 
+System.out.println("D is (" + coord4.getX() + "," + coord4.getY() + ")"); xcoord = (int) (Math.random() * 16) + 5; 
+ycoord = (int) (Math.random() * 16) + 5; 
+Point coord5 = new Point(xcoord, ycoord); 
+System.out.println("E is (" + coord5.getX() + "," + coord5.getY() + ")"); xcoord = (int) (Math.random() * 16) + 5; 
+ycoord = (int) (Math.random() * 16) + 5; 
+System.out.println("\n Line Segment AB is " + coord1.distanceTo(coord2)); ltdist = coord1.distanceTo(coord2);
+grdist = coord1.distanceTo(coord2); 
+System.out.println(" Line Segment " 
++ "" 
++ "BC is " + coord2.distanceTo(coord3)); 
+ltdist = Math.min(ltdist, coord2.distanceTo(coord3)); 
+grdist = Math.max(grdist, coord2.distanceTo(coord3)); 
+System.out.println(" Line Segment CD is " + coord3.distanceTo(coord4)); ltdist = Math.min(ltdist, coord3.distanceTo(coord4)); 
+grdist = Math.max(grdist, coord3.distanceTo(coord4)); 
+System.out.println(" Line Segment DE is " + coord4.distanceTo(coord5)); ltdist = Math.min(ltdist, coord4.distanceTo(coord5)); 
+grdist = Math.max(grdist, coord4.distanceTo(coord5)); 
+System.out.println(" Line Segment AC is " + coord1.distanceTo(coord3)); ltdist = Math.min(ltdist, coord1.distanceTo(coord3)); 
+grdist = Math.max(grdist, coord1.distanceTo(coord3)); 
+System.out.println(" Line Segment BD is " + coord2.distanceTo(coord4)); ltdist = Math.min(ltdist, coord2.distanceTo(coord4)); 
+grdist = Math.max(grdist, coord2.distanceTo(coord4)); 
+System.out.println(" Line Segment AE is " + coord1.distanceTo(coord5)); ltdist = Math.min(ltdist, coord1.distanceTo(coord5)); 
+grdist = Math.max(grdist, coord1.distanceTo(coord5)); 
+System.out.println(" Line Segment BE is " + coord2.distanceTo(coord5)); ltdist = Math.min(ltdist, coord2.distanceTo(coord5)); 
+grdist = Math.max(grdist, coord2.distanceTo(coord5)); 
+System.out.println(" Line Segment CE is " + coord3.distanceTo(coord5)); ltdist = Math.min(ltdist, coord3.distanceTo(coord5)); 
+grdist = Math.max(grdist, coord3.distanceTo(coord5)); 
+System.out.println(" Line Segment BC is " + coord1.distanceTo(coord2)); ltdist = Math.min(ltdist, coord1.distanceTo(coord2)); 
+grdist = Math.max(grdist, coord1.distanceTo(coord2)); 
+if (grdist == coord1.distanceTo(coord2)) { 
+System.out.println("\nThe Farthest two points are: AB"); } else if (grdist == coord2.distanceTo(coord3)) { 
+System.out.println("\nThe Farthest two points are: BC");
+} else if (grdist == coord3.distanceTo(coord4)) { 
+System.out.println("\nThe Farthest two points are: CD"); 
+} else if (grdist == coord4.distanceTo(coord5)) { 
+System.out.println("\nThe Farthest two points are: DE"); 
+} else if (grdist == coord1.distanceTo(coord3)) { 
+System.out.println("\nThe Farthest two points are: AC"); 
+} else if (grdist == coord2.distanceTo(coord4)) { 
+System.out.println("\nThe Farthest two points are: BD"); 
+} else if (grdist == coord1.distanceTo(coord5)) { 
+System.out.println("\nThe Farthest two points are: AE"); 
+} else if (grdist == coord2.distanceTo(coord5)) { 
+System.out.println("\nThe Farthest two points are: BE"); 
+} else if (grdist == coord3.distanceTo(coord5)) { 
+System.out.println("\nThe Farthest two points are: CE"); 
+} else { 
+System.out.println("\nThe Farthest two points are: BC"); 
+} 
+if (ltdist == coord1.distanceTo(coord2)) { 
+System.out.println("\nThe Most closest two points are: AB"); 
+} else if (ltdist == coord2.distanceTo(coord3)) { 
+System.out.println("\nThe Most closest two points are: BC"); 
+} else if (ltdist == coord3.distanceTo(coord4)) { 
+System.out.println("\nThe Most closest two points are: CD"); 
+} else if (ltdist == coord4.distanceTo(coord5)) { 
+System.out.println("\nThe Most closest two points are: DE"); 
+} else if (ltdist == coord1.distanceTo(coord3)) { 
+System.out.println("\nThe Most closest two points are: AC"); 
+} else if (ltdist == coord2.distanceTo(coord4)) { 
+System.out.println("\nThe Most closest two points are: BD"); 
+} else if (ltdist == coord1.distanceTo(coord5)) { 
+System.out.println("\nThe Most closest two points are: AE"); 
+} else if (ltdist == coord2.distanceTo(coord5)) { 
+System.out.println("\nThe Most closest two points are: BE"); 
+} else if (ltdist == coord3.distanceTo(coord5)) { 
+System.out.println("\nThe Most closest two points are: CE"); 
+} else { 
+System.out.println("\nThe Most closest two points are: BC"); 
+} 
+} 
+}
