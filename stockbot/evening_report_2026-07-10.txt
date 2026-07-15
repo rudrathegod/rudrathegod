@@ -1,0 +1,13 @@
+Evening Trading Report - 2026-07-10
+
+Trades executed: 0. No instruments traded today. closed_trades.csv has no data rows; trades.csv and daily_pnl.csv don't exist in the project folder.
+
+Total P&L today: $0 (0%). No closed trades, so no best/worst trade to report.
+
+Current equity: unverified. The Alpaca API is unreachable from this environment (proxy blocks paper-api.alpaca.markets, HTTP 403). Last recorded equity: $2,368.29 (bot startup log and briefing.log, both 2026-07-10). Flag: equity was $100,205.77 on 2026-07-02, an unexplained ~97.6% drop by today with no trade records to explain it. This predates today's window and needs manual investigation, not something today's logs can confirm.
+
+Risk-rule check: config.py sets RISK_PER_TRADE 2%, MAX_PORTFOLIO_DRAWDOWN 10%. No trades today, so nothing to check per-trade. Flag: drawdown_state.json shows peak reset to $2,368.29 (tripped: false), meaning the 10% breaker's reference point was reset after the crash and would not have caught the earlier drop.
+
+Stop-loss checks: no trades today, none to verify.
+
+Note: bot restarted today at 19:56:53 UTC with 33 instruments configured; no further activity or [HALT] lines logged since.

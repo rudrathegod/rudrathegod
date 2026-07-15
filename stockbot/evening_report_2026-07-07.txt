@@ -1,0 +1,15 @@
+Evening Trading Report - 2026-07-07
+
+Bot appears inactive since 2026-06-30 22:52 EDT (last logs/bot.out entry). heartbeat.txt was last touched 2026-07-06 15:18 UTC, so a scheduler process may still be alive, but the bot itself has logged no trading activity in well over 24 hours. No "[HALT]" lines in bot.out, so the drawdown circuit breaker never tripped.
+
+Trades executed today: 0. No instruments traded. trades.csv and daily_pnl.csv are both missing from the project folder, so nothing was logged today (or any prior day).
+
+Total P&L today: $0 (0%). No closed trades, so there is no best or worst trade to report.
+
+Current equity: unavailable. The Alpaca account endpoint is unreachable from this environment (outbound network to alpaca.markets is blocked). Last recorded equity: $100,205.77 on 2026-07-02 (logs/briefing.log). Paper account started 2026-06-30 at $100,000.
+
+Risk-rule check: config.py sets RISK_PER_TRADE 2% and MAX_PORTFOLIO_DRAWDOWN 10%. With zero trades there is nothing to check against these limits.
+
+Stop-loss check: no trades, so no stop-outs to verify.
+
+Action: bot has been silent ~7 days. Verify the launchd job or run_forever script is still running.
